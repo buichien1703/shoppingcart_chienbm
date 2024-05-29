@@ -28,20 +28,20 @@ class HotProduct extends StatelessWidget {
         itemBuilder: (context, index) {
           final product = list[index];
           return Padding(
-            padding: const EdgeInsets.all(8),
+            padding: const EdgeInsets.all(HomeDimens.radiusDefault),
             child: Container(
               width: 160,
               decoration: BoxDecoration(
-                  border: Border.fromBorderSide(
-                      BorderSide(width: 1, color: Colors.blueGrey.shade100)),
-                  borderRadius: BorderRadius.circular(10),
+                  border: const Border.fromBorderSide(
+                      BorderSide(width: 1, color: HomeColors.borderSide)),
+                  borderRadius: BorderRadius.circular(HomeDimens.radius10),
                   color: Colors.white),
               child: Column(
                 children: [
                   ClipRRect(
                     borderRadius: const BorderRadius.only(
-                        topLeft: Radius.circular(8),
-                        topRight: Radius.circular(8)),
+                        topLeft: Radius.circular(HomeDimens.radiusDefault),
+                        topRight: Radius.circular(HomeDimens.radiusDefault)),
                     child: Stack(
                       children: [
                         Image.asset(
@@ -56,7 +56,7 @@ class HotProduct extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(top: 8.0),
+                    padding: const EdgeInsets.only(top: HomeDimens.paddingDefault),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -66,7 +66,7 @@ class HotProduct extends StatelessWidget {
                               product.name,
                               style: const TextStyle(
                                   color: Colors.black,
-                                  fontSize: 16,
+                                  fontSize: HomeDimens.sizeTextMedium,
                                   fontWeight: FontWeight.bold),
                             ),
                             Text(
