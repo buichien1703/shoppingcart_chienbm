@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:qsoft_interview_shoppingcart_chienbm/features/splash/src_splash.dart';
 
 import '../../values/assets.dart';
 import '../src_feature.dart';
@@ -13,11 +14,12 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-
-  @override void initState() {
+  @override
+  void initState() {
     super.initState();
     Timer(const Duration(seconds: 3), () {
-      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeScreen()));
+      Navigator.pushReplacement(
+          context, MaterialPageRoute(builder: (context) => const HomeScreen()));
     });
   }
 
@@ -25,7 +27,15 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: SizedBox(height :100, width:100, child:  Image.asset(AppAssets.splash)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const Text(''),
+            SizedBox(
+                height: 150, width: 150, child: Image.asset(AppAssets.splash)),
+            textSplash(StrHome.textSplash),
+          ],
+        ),
       ),
     );
   }

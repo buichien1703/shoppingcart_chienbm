@@ -22,9 +22,9 @@ class _HomeScreenState extends State<HomeScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               textItem(StrHome.hotProduct),
-              HotProduct(),
+              listViewHorizontal(Product.products.length),
               textItem(StrHome.allProduct),
-              AllProduct(),
+              gridViewProduct(Product.products.length),
             ],
           ),
         ),

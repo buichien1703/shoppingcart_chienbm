@@ -8,7 +8,7 @@ Widget textItem(String text) {
     child: Text(
       text,
       style: const TextStyle(
-          color: HomeColors.orange, fontWeight: FontWeight.bold, fontSize: HomeDimens.sizeTextLarge),
+          color: HomeColors.colorApp, fontWeight: FontWeight.bold, fontSize: HomeDimens.sizeTextLarge),
     ),
   );
 }
